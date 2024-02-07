@@ -18,8 +18,12 @@ echo -e "\t\t\t\t\t    #####  ######  ####   ####  #    # ###### #       #    # 
 echo -n -e "\n\n\n\nPlease Enter the length of the password \n-> "
 read Password_Lenght
 
-for P in $(seq 1);
+# The user will be given 5 different option of passwords to select from. 
+for P in $(seq 1 5);
 do
-    openssl rand -base64 48 | cut -c1-$Password_Length
+    echo -n "$P.} "
+    openssl rand -base64 48 | cut -c1-$Password_Length # base64 has a limited character set.{Max limit is 48} and here all 48 characters are used.
+    # The encryption Algorithm used is {base64} 
+    # Openssl will generate random base64 characters 
 done
 
