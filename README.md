@@ -16,7 +16,7 @@ SecurePass-Pro is a bash script that generates random passwords with customizabl
 ## Usage
 Run the script by executing the following command:
 ```bash
-./SecurePass-Pro.sh
+./Script.sh
 ```
 Follow the prompts to specify the length of the password and choose from the generated options.
 
