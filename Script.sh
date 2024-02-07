@@ -18,6 +18,19 @@ echo -e "\t\t\t\t\t    #####  ######  ####   ####  #    # ###### #       #    # 
 echo -n -e "\n\n\n\nPlease Enter the length of the password \n-> "
 read Password_Length
 
+# Check if the input is valid 
+if ! [[$Password_Length =~ ^[0-9]+$]];
+    # {=~} is the regex matching operator.
+    # {^[0-9]+$} s a regular expression pattern:
+        # (^) asserts the start of the line.
+        # ([0-9]+) matches one or more digits (0-9).
+        # ($) asserts the end of the line.
+    # {!} negates the condition.
+then 
+    echo "Error: Please enter a valid number."
+    exit 1
+fi
+
 # The user will be given 5 different option of passwords to select from. 
 for P in $(seq 1 5);
 do
