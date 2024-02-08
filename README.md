@@ -1,7 +1,7 @@
 # SecurePass-Pro 🔒
 
 ## Description
-SecurePass-Pro is a bash script that generates random passwords with customizable length.
+SecurePass-Pro is a bash script that generates random passwords using OpenSSL's base64 encryption.
 
 ## Installation
 1. Clone the repository:
